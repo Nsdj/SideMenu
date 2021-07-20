@@ -22,11 +22,13 @@ internal protocol AnimationModel {
     var usingSpringWithDamping: CGFloat { get }
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal protocol SideMenuAnimationControllerDelegate: class {
     func sideMenuAnimationController(_ animationController: SideMenuAnimationController, didDismiss viewController: UIViewController)
     func sideMenuAnimationController(_ animationController: SideMenuAnimationController, didPresent viewController: UIViewController)
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal final class SideMenuAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
 
     typealias Model = AnimationModel & PresentationModel
@@ -108,6 +110,7 @@ internal final class SideMenuAnimationController: NSObject, UIViewControllerAnim
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SideMenuAnimationController {
 
     func duration(presenting: Bool, interactive: Bool) -> Double {
@@ -216,6 +219,7 @@ private extension SideMenuAnimationController {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension UIViewControllerContextTransitioning {
 
     var isPresenting: Bool {

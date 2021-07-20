@@ -8,6 +8,7 @@
 import UIKit
 
 // Deprecations; to be removed at a future date.
+@available(iOSApplicationExtension, unavailable)
 extension SideMenuManager {
 
     @available(*, deprecated, renamed: "leftMenuNavigationController")
@@ -204,13 +205,16 @@ extension SideMenuManager {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension SideMenuPresentationStyle {
     @available(*, deprecated, renamed: "viewSlideOutMenuIn")
     public static var viewSlideInOut: SideMenuPresentationStyle { return viewSlideOutMenuIn }
 }
 
+@available(iOSApplicationExtension, unavailable)
 @available(*, deprecated, renamed: "SideMenuNavigationController")
 public typealias UISideMenuNavigationController = SideMenuNavigationController
 
+@available(iOSApplicationExtension, unavailable)
 @available(*, deprecated, renamed: "SideMenuNavigationControllerDelegate")
 public typealias UISideMenuNavigationControllerDelegate = SideMenuNavigationControllerDelegate

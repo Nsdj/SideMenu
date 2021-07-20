@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 internal protocol PresentationModel {
     /// Draws `presentStyle.backgroundColor` behind the status bar. Default is 1.
     var statusBarEndAlpha: CGFloat { get }
@@ -20,11 +21,13 @@ internal protocol PresentationModel {
     var menuWidth: CGFloat { get }
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal protocol SideMenuPresentationControllerDelegate: class {
     func sideMenuPresentationControllerDidTap(_ presentationController: SideMenuPresentationController)
     func sideMenuPresentationController(_ presentationController: SideMenuPresentationController, didPanWith gesture: UIPanGestureRecognizer)
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal final class SideMenuPresentationController {
 
     private let config: PresentationModel
@@ -209,6 +212,7 @@ internal final class SideMenuPresentationController {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SideMenuPresentationController {
 
     var statusBarFrame: CGRect {

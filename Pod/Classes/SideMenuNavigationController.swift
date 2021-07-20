@@ -23,6 +23,7 @@ import UIKit
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal protocol MenuModel {
     /// Prevents the same view controller (or a view controller of the same class) from being pushed more than once. Defaults to true.
     var allowPushOfSameClassTwice: Bool { get }
@@ -62,6 +63,7 @@ internal protocol MenuModel {
     var pushStyle: SideMenuPushStyle { get }
 }
 
+@available(iOSApplicationExtension, unavailable)
 @objc public protocol SideMenuNavigationControllerDelegate {
     @objc optional func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool)
     @objc optional func sideMenuDidAppear(menu: SideMenuNavigationController, animated: Bool)
@@ -69,10 +71,12 @@ internal protocol MenuModel {
     @objc optional func sideMenuDidDisappear(menu: SideMenuNavigationController, animated: Bool)
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal protocol SideMenuNavigationControllerTransitionDelegate: class {
     func sideMenuTransitionDidDismiss(menu: Menu)
 }
 
+@available(iOSApplicationExtension, unavailable)
 public struct SideMenuSettings: Model, InitializableStruct {
     public var allowPushOfSameClassTwice: Bool = true
     public var alwaysAnimate: Bool = true
@@ -104,9 +108,13 @@ public struct SideMenuSettings: Model, InitializableStruct {
     public init() {}
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal typealias Menu = SideMenuNavigationController
+
+@available(iOSApplicationExtension, unavailable)
 typealias Model = MenuModel & PresentationModel & AnimationModel
 
+@available(iOSApplicationExtension, unavailable)
 @objcMembers
 open class SideMenuNavigationController: UINavigationController {
     
@@ -335,6 +343,7 @@ open class SideMenuNavigationController: UINavigationController {
 }
 
 // Interface
+@available(iOSApplicationExtension, unavailable)
 extension SideMenuNavigationController: Model {
 
     @IBInspectable open var allowPushOfSameClassTwice: Bool {
@@ -459,6 +468,7 @@ extension SideMenuNavigationController: Model {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension SideMenuNavigationController: SideMenuTransitionControllerDelegate {
 
     func sideMenuTransitionController(_ transitionController: SideMenuTransitionController, didDismiss viewController: UIViewController) {
@@ -472,6 +482,7 @@ extension SideMenuNavigationController: SideMenuTransitionControllerDelegate {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal extension SideMenuNavigationController {
 
     func handleMenuPan(_ gesture: UIPanGestureRecognizer, _ presenting: Bool) {
@@ -513,6 +524,7 @@ internal extension SideMenuNavigationController {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SideMenuNavigationController {
 
     weak var activeDelegate: SideMenuNavigationControllerDelegate? {

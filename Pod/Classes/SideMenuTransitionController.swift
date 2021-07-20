@@ -8,11 +8,13 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 internal protocol SideMenuTransitionControllerDelegate: class {
     func sideMenuTransitionController(_ transitionController: SideMenuTransitionController, didDismiss viewController: UIViewController)
     func sideMenuTransitionController(_ transitionController: SideMenuTransitionController, didPresent viewController: UIViewController)
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal final class SideMenuTransitionController: NSObject, UIViewControllerTransitioningDelegate {
 
     typealias Model = MenuModel & AnimationModel & PresentationModel
@@ -70,6 +72,7 @@ internal final class SideMenuTransitionController: NSObject, UIViewControllerTra
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension SideMenuTransitionController: SideMenuAnimationControllerDelegate {
 
     internal func sideMenuAnimationController(_ animationController: SideMenuAnimationController, didDismiss viewController: UIViewController) {
@@ -81,6 +84,7 @@ extension SideMenuTransitionController: SideMenuAnimationControllerDelegate {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SideMenuTransitionController {
 
     func interactionController(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {

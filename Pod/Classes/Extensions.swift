@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 extension NSObject: InitializableClass {}
 
 internal extension UIView {
@@ -110,6 +111,7 @@ internal extension UIPanGestureRecognizer {
 
 internal extension UIApplication {
 
+    @available(iOSApplicationExtension, unavailable)
     var keyWindow: UIWindow? {
         return UIApplication.shared.windows.filter { $0.isKeyWindow }.first
     }

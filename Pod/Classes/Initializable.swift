@@ -7,10 +7,12 @@
 
 import Foundation
 
+@available(iOSApplicationExtension, unavailable)
 internal protocol InitializableClass: class {
     init()
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension InitializableClass {
     init(_ block: (Self) -> Void) {
         self.init()
@@ -23,10 +25,12 @@ extension InitializableClass {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 public protocol InitializableStruct {
     init()
 }
 
+@available(iOSApplicationExtension, unavailable)
 public extension InitializableStruct {
     init(_ block: (inout Self) -> Void) {
         self.init()

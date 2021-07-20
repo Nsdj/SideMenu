@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 @objcMembers
 public class SideMenuManager: NSObject {
 
@@ -118,6 +119,7 @@ public class SideMenuManager: NSObject {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 internal extension SideMenuManager {
 
     func setMenu(_ menu: Menu?, forLeftSide leftSide: Bool) {
@@ -136,6 +138,7 @@ internal extension SideMenuManager {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SideMenuManager {
 
     @objc func handlePresentMenuScreenEdge(_ gesture: UIScreenEdgePanGestureRecognizer) {
@@ -219,6 +222,7 @@ private extension SideMenuManager {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension SideMenuManager: SideMenuNavigationControllerTransitionDelegate {
 
     internal func sideMenuTransitionDidDismiss(menu: Menu) {

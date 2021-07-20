@@ -8,6 +8,7 @@
 import UIKit
 
 @objcMembers
+@available(iOSApplicationExtension, unavailable)
 open class SideMenuPresentationStyle: InitializableClass {
     /// Background color behind the views and status bar color
     open var backgroundColor: UIColor = .black
@@ -52,6 +53,7 @@ open class SideMenuPresentationStyle: InitializableClass {
     open func dismissalTransitionDidEnd(to presentedViewController: UIViewController, from presentingViewController: UIViewController, _ completed: Bool) {}
 }
 
+@available(iOSApplicationExtension, unavailable)
 public extension SideMenuPresentationStyle {
     /// Menu slides in over the existing view.
     static var menuSlideIn: SideMenuPresentationStyle {
